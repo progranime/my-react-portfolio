@@ -1,0 +1,15 @@
+.hr {
+    position: relative;
+    border-color: #000;
+    &--tag {
+        &:after {
+            content: '</>';
+            position: absolute;
+            top: -18px;
+            left: 46%;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}

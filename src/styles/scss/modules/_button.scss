@@ -1,0 +1,20 @@
+.btn {
+
+    &.btn {
+
+        &--outline {
+            border: 1px solid #fff;
+            width: 120px;
+            color: #fff;
+            padding: 5px 0px;
+        }
+
+        &--depressed {
+            background-color: #000;
+            color: #fff;
+        }
+        
+
+    }
+
+}
