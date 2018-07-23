@@ -4,7 +4,8 @@ import Card from '../components/Card';
 
 class About extends Component {
     render () {
-        let portfolios = this.props.state.portfoliosReducer;
+        let portfolios = this.props.portfolios;
+        console.log(this.props)
 
         return (
             <div className="container">
@@ -58,7 +59,7 @@ class About extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        state
+        portfolios: state.portfolios
     }
 }
 

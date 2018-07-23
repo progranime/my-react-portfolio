@@ -6,16 +6,16 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Home extends Component {
-    
+
     render () {
-        let portfolios = this.props.state.portfoliosReducer;
+        let portfolios = this.props.portfolios;
         return (
             <div className="container">
 
                 <section>
                     <div className="row">
                         <div className="col-12 col-sm-6 text-center">
-                            <img src={dp} alt="" className="mw-100 rounded-circle"/>
+                            <img src="https://cdn.vox-cdn.com/images/verge/default-avatar.v989902574302a6378709709f7baab789b242ebbb.gif" alt="" className="mw-100 rounded-circle"/>
                         </div>
                         <div className="col-12 col-sm-6 align-self-center">
                             <h3>JEREMY ESPINOSA</h3>
@@ -54,7 +54,7 @@ class Home extends Component {
 
 const mapStateToProps = (state, props) => {
     return {
-        state
+        portfolios: state.portfolios
     }
 };
 
