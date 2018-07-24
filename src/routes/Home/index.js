@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import Card from '../../components/Card';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { getAllPortfolios } from '../../actions/portfolios-action';
+
 
 class Home extends Component {
-
-    componentWillMount () {
-        console.log('Component will mount')
-    }
 
     render () {
         let portfolios = this.props.portfolios;
@@ -58,6 +56,10 @@ const mapStateToProps = (state, props) => {
     return {
         portfolios: state.portfolios
     }
-};
+}
 
-export default connect(mapStateToProps) (Home);
+const mapActionsToProps = {
+    onGetAllPortfolios: getAllPortfolios
+}
+
+export default connect(mapStateToProps, mapActionsToProps) (Home)

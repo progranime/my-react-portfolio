@@ -4,7 +4,7 @@ import cardBg from '../images/card-bg.jpg';
 
 class Card extends Component {
     render () {
-        let cards = this.props.data.portfolios.map( (card) => {
+        let cards = this.props.data.map( (card) => {
             return (
                 <div className="card" key={card.id}>
                     <div className="card__img-holder">

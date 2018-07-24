@@ -1,3 +1,5 @@
+import  { GET_ALL_PORTFOLIOS } from '../actions/portfolios-action';
+
 const initialState = {
     portfolios: [
         {
@@ -21,12 +23,12 @@ const initialState = {
     ]
 }
 
-const portfoliosReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case 'sample': 
-            return state
+const portfoliosReducer = (state = initialState, { type, payload }) => {
+    switch(type) {
+        case GET_ALL_PORTFOLIOS: 
+            return state.portfolios
         default: 
-            return state
+            return state.portfolios
     }
 }
 
