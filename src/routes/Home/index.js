@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import dp from '../images/dp.jpg';
-
-import Card from '../components/Card';
+import Card from '../../components/Card';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Home extends Component {
+
+    componentWillMount () {
+        console.log('Component will mount')
+    }
 
     render () {
         let portfolios = this.props.portfolios;

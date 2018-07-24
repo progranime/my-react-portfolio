@@ -41,7 +41,7 @@ class Header extends Component {
                                     <NavLink to="/about">About</NavLink>
                                 </li>
                                 <li className="navigation__list-item" >
-                                    <NavLink to="/portfolio">Portfolio</NavLink>
+                                    <NavLink to="/portfolios">Portfolio</NavLink>
                                 </li>
                             </ul>
                         </div>
