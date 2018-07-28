@@ -1,0 +1,58 @@
+.social-share {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+
+    @include media-breakpoint-up (sm) {
+        top: 50%;
+        left: $global-spacing;
+        bottom: auto;
+        transform: translate(0, -50%);
+        width: auto;
+        box-shadow: 0px 1px 10px #BBB;
+    }
+
+    &__container {
+        padding: ($global-spacing) ($global-spacing / 3);
+        background-color: #f1f1f1;
+            
+        .list {
+            text-align: center;
+
+            &__item-title {
+                display: none;
+
+                @include media-breakpoint-up (sm) {
+                    text-align: center;
+                    display: block;
+                    margin-bottom: $global-spacing;
+                    font-weight: 400;
+                    color: #bbb;
+                }
+
+            }
+
+            &__item {
+                display: inline;
+
+                @include media-breakpoint-up (sm) {
+                    display: block;
+                    margin-right: 0 !important;
+
+                    &:not(:last-child()) {
+                        margin-bottom: $global-spacing;
+                    }
+                }
+                
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,11 @@
+.heading {
+    &:after {
+        content: '';
+        background-color: $primary-color;
+        width: 100px;
+        height: 4px;
+        display: block;
+        margin-top: ($global-spacing / 3);
+        border-top-right-radius: ($global-spacing / 3);
+    }
+}

@@ -1,44 +1,34 @@
 .banner {
-
     .banner {
-
         &__container {
             position: relative;
-        }
-
-        &__img {
-            background-image: url('../../images/banner.jpg');
-            background-size: cover;
-            width: 100%;
-            height: 30vh;
-            background-position: center;
-            transition: all .3s ease-in-out;
-
-            @include media-breakpoint-up (sm) {
-                height: 50vh;
-            }
         }
 
         &__overlay {
             position: absolute;
             top: 0;
             left: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.3);
             width: 100%;
             height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        &__img-holder {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        &__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
             color: #fff;
-            padding: 15px;
-
-            .banner__content {
-                position: absolute;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                left: 50%;
-            }
-
+            line-height: ($global-spacing * 3);
         }
 
     }
-
 }

@@ -9,14 +9,22 @@ class HeaderNavigation extends Component {
         this.state = {
             navLinks: [
                 {
+                    id: 1,
                     label: 'Home',
                     link: '/'
                 },
                 {
+                    id: 2,
                     label: 'About',
                     link: '/about'
                 },
                 {
+                    id: 3,
+                    label: 'Contact',
+                    link: '/contact'
+                },
+                {
+                    id: 4,
                     label: 'Portfolios',
                     link: '/portfolios'
                 }
@@ -28,17 +36,17 @@ class HeaderNavigation extends Component {
     render () {
         let navLinks = this.state.navLinks.map( (navLink) => {
             return (
-                <li className="navigation__list-item" >
-                    <NavLink to={navLink.link}>{navLink.label}</NavLink>
+                <li className="nav__list-item" key={navLink.id}>
+                    <NavLink to={navLink.link} onClick={this.props.onClassSwitcher}>{navLink.label}</NavLink>
                 </li>
             )
         })
         return (
-            <div className="header__navigation">
-                <ul className="navigation__list">
+            <nav className={this.props.menuState ? `header__nav active` : `header__nav`}>
+                <ul className="nav__list">
                     {navLinks}
                 </ul>
-            </div>
+            </nav>
         );
     }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Card from '../../components/Card';
+// import { connect } from 'react-redux';
+// import Card from '../../components/Card';
+import dp from '../../images/dp.jpg';
 
 class About extends Component {
     render () {
@@ -8,59 +9,37 @@ class About extends Component {
         console.log(this.props)
 
         return (
-            <div className="container">
-                <section>
-                    <div className="row">
-                        <div className="col-12">
-                            <h1 className="text-center">ABOUT ME</h1>
-                        </div>
-                        <div className="col-12">
-                            <p>Lorem ipsum dolor sit amet, mea id libris possim verterem, 
-                                impetus singulis prodesset pro an. Cetero aeterno quo ei, 
-                                eius rationibus cum eu. Minimum dissentiet mediocritatem eos 
-                                id. Pri te aeque euismod imperdiet. Deserunt reprimique nec 
-                                id, sit ei solet incorrupte.
-                            </p>
-                        </div>
+            <div className="container py-4">
+                <div className="row">
+                    <div className="col-12">
+                        <h1 className="heading">About Me</h1>
                     </div>
-                </section>
-
-                <hr className="hr hr--tag" />
-
-                <section>
-                    <div className="row">
-                        <div className="col-12">
-                            <h1 className="text-center">PORTFOLIO</h1>
-                        </div>
-                        <div className="col-12">
-                            <Card data={portfolios} />
-                        </div>
+                    <div className="col-12 col-sm-4 order-sm-2 align-self-center text-center">
+                        <img src={dp} alt="" className="rounded-circle"/>
                     </div>
-                </section>
-
-                <hr className="hr hr--tag" />
-
-                <section>
-                    <div className="row">
-                        <div className="col-12">
-                            <h1 className="text-center">Experience</h1>
-                        </div>
-                        <div className="col-12">
+                    <div className="col-12 col-sm-8">
                         
-                        </div>
+                        <h3>JEREMY ESPINOSA</h3>
+                        <p><strong>Web Developer / Front-End Developer</strong></p>
+                        <p>Lorem ipsum dolor sit amet, dicta gloriatur forensibus ei ius. 
+                            Eu sed soleat prodesset, nam congue semper moderatius ad. 
+                            Libris perpetua at vix, libris honestatis contentiones mei at, 
+                            enim modus malorum mea ad. Per no modus reque expetendis. Cu vero 
+                            omittam abhorreant ius, at wisi molestie fabellas has, usu et quem 
+                            nostrum.
+                        </p>
                     </div>
-                </section>
-
-
+                </div>
             </div>
         );
     }
 }
 
-const mapStateToProps = (state) => {
+/* const mapStateToProps = (state) => {
     return {
         portfolios: state.portfolios
     }
-}
+} */
 
-export default connect(mapStateToProps) (About);
+// export default connect(mapStateToProps) (About);
+export default About;

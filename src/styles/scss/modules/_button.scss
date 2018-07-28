@@ -1,20 +1,43 @@
 .btn {
+    transition: all .3s ease-in-out;
 
     &.btn {
 
         &--outline {
-            border: 1px solid #fff;
-            width: 120px;
-            color: #fff;
-            padding: 5px 0px;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+
+            &:hover {
+                background-color: $primary-color;
+                color: #fff;
+            }
         }
 
-        &--depressed {
-            background-color: #000;
+        &--overlay {
+            border: 1px solid #fff;
             color: #fff;
+
+            &:hover {
+                background-color: #000;
+                border: 1px solid #000;
+                color: #fff;
+            }
         }
         
+        &--standard {
+            background-color: $primary-color;
+            height: 35px;
+            color: #fff;
 
+            &:hover {
+                background-color: $darken-primary-color;
+            }
+        }
+        &--rounded {
+            background-color: $primary-color;
+            border-radius: 50px;
+            color: #fff;
+        }
     }
 
 }

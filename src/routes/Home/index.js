@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Card from '../../components/Card';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getAllPortfolios } from '../../actions/portfolios-action';
+import banner from '../../images/banner.jpg';
 
 
 class Home extends Component {
@@ -10,43 +12,19 @@ class Home extends Component {
     render () {
         let portfolios = this.props.portfolios;
         return (
-            <div className="container">
-
-                <section>
-                    <div className="row">
-                        <div className="col-12 col-sm-6 text-center">
-                            <img src="https://cdn.vox-cdn.com/images/verge/default-avatar.v989902574302a6378709709f7baab789b242ebbb.gif" alt="" className="mw-100 rounded-circle"/>
-                        </div>
-                        <div className="col-12 col-sm-6 align-self-center">
-                            <h3>JEREMY ESPINOSA</h3>
-                            <p>Web Developer</p>
-                            <NavLink to="/about">Learn More About Me</NavLink>
+            <div>
+                <div className="banner">
+                    <div className="banner__container">
+                        <div className="banner__overlay"></div>
+                        <div className="banner__img-holder" style={{backgroundImage: `url(${banner})`}} ></div>
+                        <div className="banner__content">
+                            <h1>WEB DEVELOPMENT</h1>
+                            <p>Let's transform your idea into Website</p>
+                            <Link to="/about" class="btn btn--overlay">Learn More About Me </Link>
                         </div>
                     </div>
-                </section>    
+                </div>
 
-                <hr className="hr hr--tag" />
-
-                <section>
-                    <div className="row">
-                        <div className="col-12">
-                            <h1 className="text-center">PORTFOLIO</h1>
-                        </div>
-                        <div className="col-12">
-                            <Card data={portfolios} />
-                        </div>
-                    </div>
-                </section>
-
-                <hr className="hr hr--tag" />
-
-                <section>
-                    <div className="row">
-                        <div className="col-12">
-                            <h1 className="text-center">GET IN TOUCH</h1>
-                        </div>
-                    </div>
-                </section>
             </div>
         );
     }

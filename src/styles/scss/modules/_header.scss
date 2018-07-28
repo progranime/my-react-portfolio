@@ -1,30 +1,11 @@
-.header--overlay {
-    position: fixed;
-    width: 100%;
-    height: calc(100vh - 35px);
-    top: 61px;
-    left: 0;
-    z-index: 1;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-
-    &.active {
-        display: block;
-    }
-}
-
 .header {
-    position: fixed;
-    width: 100%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px ($global-spacing);
-    z-index: 5;
-    border-bottom: 1px solid #fff;
-
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: ($global-spacing) 0px;
     .header {
 
         &__container {
+            @include make-container();
             @include make-row();
             margin-left: 0;
             margin-right: 0;
@@ -35,6 +16,7 @@
             cursor: pointer;
             display: block;
             align-self: center;
+            z-index: 5;
             
             @include media-breakpoint-up (sm) {
                 display: none;
@@ -42,7 +24,7 @@
 
             span {
                 width: 30px;
-                border: 1px solid #fff;
+                border: 1px solid #000;
                 display: block;
                 position: relative;
                 margin-bottom: 5px;
@@ -82,64 +64,80 @@
                 @include make-col(3);
                 text-align: left;
             }
-            img {
-                width: 50px;
-                height: 50px;
-            }
 
             a {
-                color: #fff;
-                text-decoration: none;
+                color: #000;
+                h6 {
+                    margin: 0;
+                }
             }
-            
         }
 
-        &__navigation {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 100%;
-            top: 61px;
+        &__nav {
+            background-color: rgba(0,0,0,1);
+            position: fixed;
+            z-index: 1;
+            top: 50px;
             left: 0;
-            transition: all .3s ease-in-out;
-            transform: translateX(-100%);
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            display: none;
 
-            @include media-breakpoint-up(sm) {
-                position: relative;
-                transform: translateX(0);
-                @include make-col(9);
-                text-align: right;
-                top: 0;
-                background-color: transparent;
+            &.active {
+                display: block;
             }
 
-            .navigation__list {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                
-                .navigation__list-item {
-                    padding: ($global-spacing) 0px;
-                    text-transform: capitalize;
+            @include media-breakpoint-up (sm) {
+                @include make-col(9);
+                position: relative;
+                top: 0;
+                background-color: transparent;
+                width: auto;
+                height: auto;
+                text-align: right;
+                display: block;
+            }
 
-                    @include media-breakpoint-up(sm) {
-                        display: inline-block;
-                        border-radius: 10px;
+            .nav {
+
+                &__list {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                    @include media-breakpoint-up (sm) {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        transform: none;
                     }
+                }
 
-                    a {
-                        margin-left: 15px;
-                        color: #fff;
-                        text-decoration: none;
-
-                        @include media-breakpoint-up(sm) {
-                            margin: 0px 15px;
+                &__list-item {
+                    
+                    @include media-breakpoint-up (sm) {
+                        display: inline;
+                        &:not(:last-child()) {
+                            margin-right: $global-spacing;
                         }
                     }
 
-                    &:hover {
-                        background-color: #040404;
+                    a {
+                        font-size: 22px;
+                        color: #fff;
+
+                        @include media-breakpoint-up (sm) {
+                            color: #000;
+                            font-size: 16px;
+                        }
                     }
                 }
+
             }
         }
 
