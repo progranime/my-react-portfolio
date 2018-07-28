@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import cardBg from '../images/card-bg.jpg';
+import cardBg from '../assets/card-bg.jpg';
 
 class Card extends Component {
     render () {

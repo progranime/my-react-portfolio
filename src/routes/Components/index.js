@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import banner from '../../images/banner.jpg';
+import banner from '../../assets/banner.jpg';
 
 class Components extends Component {
     render () {
@@ -19,7 +19,7 @@ class Components extends Component {
                             <h6>JEREMY</h6>
                         </div>
                         <nav className="header__nav">
-                            <ul class="nav__list">
+                            <ul className="nav__list">
                                 <li className="nav__list-item"><a href="#">Home</a></li>
                                 <li className="nav__list-item"><a href="#">About</a></li>
                                 <li className="nav__list-item"><a href="#">Portfolios</a></li>

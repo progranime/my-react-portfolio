@@ -22,11 +22,11 @@ class App extends Component {
             {/* <SocialShare /> */}
             <Switch> {/* This will check the routes from top to bottom if have exists */}
               <Route path="/" component={Home} exact/>
-              <Route path="/about" component={About}/>
-              <Route path="/contact" component={Contact}/>
-              <Route path="/portfolios" component={Portfolios} exact/>
-              <Route path="/portfolio/:id" component={Portfolio} exact/>
-              <Route path="/components" component={Components} exact/>
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/portfolios" component={Portfolios} />
+              <Route path="/portfolio/:id" component={Portfolio} />
+              <Route path="/components" component={Components} />
               <Route component={Error} />
             </Switch>
           </div>

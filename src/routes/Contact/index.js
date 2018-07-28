@@ -6,8 +6,12 @@ class Contact extends Component {
             <div className="container py-4">
 
                 <div className="row">
-                    <div className="col-12 col-sm-6">
-                        <h4 className="heading">Contact Us</h4>
+                    <div className="col-12 col-sm-6 align-self-center order-sm-2">
+                        <img src="https://images.indianexpress.com/2017/05/google-maps-759.jpg" alt="" className="w-100"/>
+                    </div>
+
+                    <div className="col-12 col-sm-6 order-sm-1">
+                        <h3 className="heading">Contact Us</h3>
                         <p>React out me for any inquiries</p>
 
                         <form action="">
@@ -26,14 +30,12 @@ class Contact extends Component {
                                 <textarea name="message" id="message" rows="5" className="form-control"></textarea>
                             </div>
 
-                            <input type="button" class="btn btn--standard btn-block" value="Hire Me!"/>
+                            <input type="button" className="btn btn--standard btn-block" value="Hire Me!"/>
                         
                         </form>
 
                     </div>
-                    <div className="col-12 col-sm-6 align-self-center">
-                        <img src="https://images.indianexpress.com/2017/05/google-maps-759.jpg" alt="" className="w-100"/>
-                    </div>
+                    
                 </div>
 
             </div>

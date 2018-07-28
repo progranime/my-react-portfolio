@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import linkedInLogo from '../images/linkedin.png';
+import linkedInLogo from '../assets/linkedin.png';
 
 class SocialShare extends Component {
     

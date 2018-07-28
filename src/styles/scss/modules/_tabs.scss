@@ -1,0 +1,39 @@
+.nav-tabs {
+
+    &--custom {
+
+        .nav {
+
+            &-item {
+
+            }
+
+            &-link {
+                color: #000 !important;
+                text-transform: uppercase;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    border: none;
+                }
+
+                &.active {
+                    border: none;
+                    border-bottom: 3px solid $primary-color;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.tab-content {
+
+    &--custom {
+        margin-top: $global-spacing;
+    }
+
+}
