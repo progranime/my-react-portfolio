@@ -3,13 +3,16 @@
     margin: 0;
     padding: 0;
 
-    .list {
+    &.list {
+        &--inline {
+            .list__item {
+                display: inline;
 
-        &__item {
-            &:not(:last-child()) {
-                margin-right: $global-spacing;
+                &:not(:last-child()) {
+                    margin-right: ($global-spacing / 3);
+                }
+                
             }
         }
-
     }
 }

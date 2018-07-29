@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import casualDp from '../../assets/casual-dp.jpg';
 import resume from '../../assets/docs/jeremy-espinosa-resume.pdf';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
+import * as FA from 'react-icons/lib/fa';
+import musictribe from '../../assets/musictribe.png';
 
 class About extends Component {
     constructor(props) {
@@ -61,12 +63,18 @@ class About extends Component {
                                     Projects
                                 </NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink className={{ active: this.state.activeTab === '5' }}
+                                    onClick={() => { this.toggle('5'); }}>
+                                    Experience
+                                </NavLink>
+                            </NavItem>
                         </Nav>
 
                         <TabContent className="tab-content--custom" activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
-                                <Row>
-                                    <Col sm="12">
+                                <div className="row">
+                                    <div className="col-12">
                                         <h4>JEREMY ESPINOSA</h4>
                                         <p className="subheading"><strong>Web Developer / Front-End Developer</strong></p>
                                         
@@ -74,12 +82,22 @@ class About extends Component {
                                         <p>I am seeking employment with a company where I can use my skills to grow and be an asset to the company
                                         especially in the field of software development. Willing to learn different programming languages and tools
                                         that will enhance and further strengthen my skills.</p>
-                                    </Col>
-                                </Row>
+
+                                        <h4 className="heading">Profile</h4>
+                                        <ul className="list list--inline">
+                                            <li className="list__item">
+                                                <a href="https://linkedin.com/in/jeremy-espinosa-213236119/" target="_blank"><FA.FaLinkedinSquare className="icon icon--xs"/></a>
+                                            </li>
+                                            <li className="list__item">
+                                                <a href="https://github.com/progranime" target="_blank"><FA.FaGithubSquare className="icon icon--xs"/></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </TabPane>
                             <TabPane tabId="2">
-                                <Row>
-                                    <Col sm="12">
+                                <div className="row">
+                                    <div className="col-12">
                                         <h4 className="heading">Education</h4>
                                         <ul>
                                             <li><strong>School: </strong>Technological Institute of the Philippines (TIP), Quezon City</li>
@@ -96,12 +114,12 @@ class About extends Component {
                                             <li>Certificate of Recognition for being on the VPAA’s List for Second Semester, School Year 2015-2016</li>
                                             <li>Certificate of Recognition for winning 3rd place in the Science and Technology Fair 2016 during TIP’s 54th Foundation Anniversary</li>
                                         </ul>
-                                    </Col>
-                                </Row>
+                                    </div>
+                                </div>
                             </TabPane>
                             <TabPane tabId="3">
-                                <Row>
-                                    <Col sm="12">
+                                <div className="row">
+                                    <div className="col-12">
                                         <h4 className="heading">Knowledge, Skills and Attitude</h4>
                                         <ul>
                                             <li>Proficient in using programming languages such as Java, Android, HTML5, CSS3 (LESS/SASS), JavaScript (jQuery), AJAX, PHP and MySQL.</li>
@@ -111,14 +129,15 @@ class About extends Component {
                                             <li>Knowledge in using Adobe Photoshop, Eclipse, Android Studio, Windows IIS7 , Git, Tortoise SVN, Task Runner (Grunt, Gulp), NPM, NVM.</li>
                                             <li>Determined and eager to learn anything that can help me to improve and adapt different tools that would help the development of the project.</li>
                                         </ul>
-                                    </Col>
-                                </Row>
+                                    </div>
+                                </div>
                             </TabPane>
 
                             <TabPane tabId="4">
-                                <Row>
-                                    <Col sm="12">
-                                        <h4 className="heading">Designs, Projects Completed</h4>
+                                
+                                <div className="row">
+                                    <div className="col-12">
+                                    <h4 className="heading">Designs, Projects Completed</h4>
                                         <ul>
                                             <li>
                                                 <p className="subheading"><strong>AvatarMaker</strong></p>
@@ -148,8 +167,36 @@ class About extends Component {
                                                     provide authentic data using GeoSCAN application.</p>
                                             </li>
                                         </ul>
-                                    </Col>
-                                </Row>
+                                    </div>
+                                </div>
+                                    
+                            </TabPane>
+
+                            <TabPane tabId="5">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <h4 className="heading">Professional Experience</h4>
+
+                                        <div className="row">
+                                            <div className="col-6">
+                                                <h6 className="subheading">Music Tribe</h6>
+                                                <ul className="list">
+                                                    <li className="list__item"><strong>Position: </strong>Web Specialist</li>
+                                                    <li className="list__item"><strong>Year: </strong>Aug 2017 - Present</li>
+                                                </ul>
+                                            </div>
+
+                                            <div className="col-6">
+                                                <h6 className="subheading">Gee Pacific</h6>
+                                                <ul className="list">
+                                                    <li className="list__item"><strong>Position: </strong>Web Developer</li>
+                                                    <li className="list__item"><strong>Year: </strong>June 2016 - June 2017</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </TabPane>
                         </TabContent>
                     </div>

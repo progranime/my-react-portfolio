@@ -135,6 +135,7 @@
                         &:hover,
                         &.active {
                             border-bottom: 3px solid $primary-color;
+                            border-bottom-right-radius: ($global-spacing / 3);
                         }
 
                         @include media-breakpoint-up (sm) {

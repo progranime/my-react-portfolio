@@ -12,7 +12,7 @@ class Error extends Component {
                     <div className="banner__content">
                         <h1>ERROR 404</h1>
                         <p>The page you were looking for could not be found</p>
-                        <Link to="/" className="btn btn--rounded">BACK TO HOME PAGE</Link>
+                        <Link to="/" className="btn btn--rounded">Back to Homepage</Link>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import * as FA from 'react-icons/lib/fa';
+
 
 class Contact extends Component {
     render () {
@@ -36,6 +38,42 @@ class Contact extends Component {
 
                     </div>
                     
+                </div>
+
+                <div className="row py-5">
+                    <div className="col-12 col-sm-4">
+                        <div className="row">
+                            <div className="col-4 text-center align-self-center">
+                                <FA.FaMapMarker className="icon icon--sm"/>
+                            </div>
+                            <div className="col-8 align-self-center">
+                                <h6>Location:</h6>
+                                <p className="subheading">Pasig City</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-4">
+                        <div className="row">
+                            <div className="col-4 text-center align-self-center">
+                                <FA.FaEnvelopeO className="icon icon--sm"/>
+                            </div>
+                            <div className="col-8">
+                                <h6>Email:</h6>
+                                <p className="subheading">jeremyespinosa1995@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-4">
+                        <div className="row">
+                            <div className="col-4 text-center align-self-center">
+                                <FA.FaPhone className="icon icon--sm"/>
+                            </div>
+                            <div className="col-8 align-self-center">
+                                <h6>Phone:</h6>
+                                <p className="subheading">+63 9159795830</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
