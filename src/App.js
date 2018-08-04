@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header';
-import SocialShare from './components/SocialShare';
 
 import Home from './routes/Home';
 import About from './routes/About';

@@ -1,9 +1,11 @@
-import { combineReducers, createStore } from 'redux';
-import portfoliosReducer from './portfolios-reducer';
+import { combineReducers, createStore } from 'redux'
+import portfoliosReducer from './portfolios-reducer'
+import detailsReducer from './details-reducer'
 
 const store = createStore(
     combineReducers({
-        portfolios: portfoliosReducer
+        portfolios: portfoliosReducer,
+        details: detailsReducer
     })
 );
 

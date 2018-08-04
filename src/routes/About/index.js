@@ -3,7 +3,7 @@ import casualDp from '../../assets/casual-dp.jpg';
 import resume from '../../assets/docs/jeremy-espinosa-resume.pdf';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import * as FA from 'react-icons/lib/fa';
-import musictribe from '../../assets/musictribe.png';
+import { connect } from 'react-redux'
 
 class About extends Component {
     constructor(props) {
@@ -25,6 +25,23 @@ class About extends Component {
     }
 
     render () {
+
+        let skills = this.props.details.skills.map( (skill, index) => {
+            return <li key={index}>{skill}</li>
+        } )
+
+        let awards = this.props.details.awards.map( (award, index) => {
+            return <li key={index}>{award}</li>
+        })
+        
+        let projects = this.props.details.projects.map( (project, index) => {
+            return (
+                <li key={index}>
+                    <p className="subheading">{project.title}</p>
+                    <p>{project.description}</p>
+                </li>
+            )
+        })
 
         return (
             <div className="container py-4">
@@ -79,9 +96,7 @@ class About extends Component {
                                         <p className="subheading"><strong>Web Developer / Front-End Developer</strong></p>
                                         
                                         <h4 className="heading">Objective</h4>
-                                        <p>I am seeking employment with a company where I can use my skills to grow and be an asset to the company
-                                        especially in the field of software development. Willing to learn different programming languages and tools
-                                        that will enhance and further strengthen my skills.</p>
+                                        <p>{this.props.details.objectives}</p>
 
                                         <h4 className="heading">Profile</h4>
                                         <ul className="list list--inline">
@@ -107,12 +122,7 @@ class About extends Component {
 
                                         <h4 className="heading">Certifications and Awards</h4>
                                         <ul>
-                                            <li>Certificate of Recognition for being on the Dean’s List for First Semester, School Year 2013-2014</li>
-                                            <li>Certificate of Participation and Awarded 3rd place in Philippine Programming Challenge 2015</li>
-                                            <li>Certificate of Recognition as member of the team that won 3rd place in the Philippine Programming Challenge 2015</li>
-                                            <li>Certificate of Recognition for being on the Dean’s List for First Semester, School Year 2015-2016</li>
-                                            <li>Certificate of Recognition for being on the VPAA’s List for Second Semester, School Year 2015-2016</li>
-                                            <li>Certificate of Recognition for winning 3rd place in the Science and Technology Fair 2016 during TIP’s 54th Foundation Anniversary</li>
+                                            {awards}
                                         </ul>
                                     </div>
                                 </div>
@@ -122,12 +132,7 @@ class About extends Component {
                                     <div className="col-12">
                                         <h4 className="heading">Knowledge, Skills and Attitude</h4>
                                         <ul>
-                                            <li>Proficient in using programming languages such as Java, Android, HTML5, CSS3 (LESS/SASS), JavaScript (jQuery), AJAX, PHP and MySQL.</li>
-                                            <li>Following the Mobile First Design and Modular Coding.</li>
-                                            <li>Knowledge in Content Management System like WordPress.</li>
-                                            <li>Knowledge in using MVC Framework in PHP like CodeIgniter.</li>
-                                            <li>Knowledge in using Adobe Photoshop, Eclipse, Android Studio, Windows IIS7 , Git, Tortoise SVN, Task Runner (Grunt, Gulp), NPM, NVM.</li>
-                                            <li>Determined and eager to learn anything that can help me to improve and adapt different tools that would help the development of the project.</li>
+                                            {skills}
                                         </ul>
                                     </div>
                                 </div>
@@ -138,34 +143,9 @@ class About extends Component {
                                 <div className="row">
                                     <div className="col-12">
                                     <h4 className="heading">Designs, Projects Completed</h4>
+                                        
                                         <ul>
-                                            <li>
-                                                <p className="subheading"><strong>AvatarMaker</strong></p>
-                                                <p>Lead programmer creates an avatar that can fully customized, 
-                                                using HTML5, CSS3 (Bootstrap, SASS), Javascript (jQuery), AJAX, 
-                                                HandlebarJS (Templating), Gulp (JS Task Runner) and CodeIgniter 
-                                                (PHP Framework).</p>
-                                            </li>
-                                            
-                                            <li>
-                                                <p className="subheading"><strong>Job Description / Pledge</strong></p>
-                                                <p>Lead programmer creates the job description of the employee of the company, 
-                                                    using HTML5, CSS3(Bootstrap, SASS), Javascript (jQuery), AJAX, HandlebarJS (Templating), 
-                                                    Gulp (JS Task Runner), and CodeIgniter (PHP Framework).</p>
-                                            </li>
-
-                                            <li>
-                                                <p className="subheading"><strong>Superants Inc. Website</strong></p>
-                                                <p>Lead Programmer, using HTML5, CSS3, Bootstrap, Javascript, Jquery, PHP and a PHP Framework CodeIgniter.</p>
-                                            </li>
-
-                                            <li>
-                                                <p className="subheading"><strong>GeoSCAN</strong></p>
-                                                <p>Programmer & Concept Developer, create an android application that gives 
-                                                    civilian awareness on the crime happening to his/her surroundings and 
-                                                    automatically report it to the police authorities. This application will 
-                                                    provide authentic data using GeoSCAN application.</p>
-                                            </li>
+                                            {projects}
                                         </ul>
                                     </div>
                                 </div>
@@ -206,11 +186,9 @@ class About extends Component {
     }
 }
 
-/* const mapStateToProps = (state) => {
-    return {
-        portfolios: state.portfolios
-    }
-} */
+const mapStateToProps = (state) => ({
+    details: state.details
+})
 
-// export default connect(mapStateToProps) (About);
-export default About;
+export default connect(mapStateToProps) (About);
+// export default About;
