@@ -23,7 +23,7 @@ class Portfolio extends Component {
         })
 
         return (
-            <div className="container">
+            <div className="container py-4">
                 <h3 className="heading">{this.props.portfolio[0].title}</h3>
                 <div className="cards row">
                     {portfolios}

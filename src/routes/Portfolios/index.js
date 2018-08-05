@@ -27,7 +27,7 @@ class Portfolio extends Component {
             )
         })
         return (
-            <div className="container">
+            <div className="container py-4">
 
                 <div className="cards row">
                     {portfolios}
