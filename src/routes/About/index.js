@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import casualDp from '../../assets/casual-dp.jpg';
 import resume from '../../assets/docs/jeremy-espinosa-resume.pdf';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import * as FA from 'react-icons/lib/fa';
@@ -15,7 +14,7 @@ class About extends Component {
         }
 
     }
-    
+
     toggle(tab) {
         if (this.state.activeTab !== tab) {
             this.setState({
@@ -33,7 +32,7 @@ class About extends Component {
         let awards = this.props.details.awards.map( (award, index) => {
             return <li key={index}>{award}</li>
         })
-        
+
         let projects = this.props.details.projects.map( (project, index) => {
             return (
                 <li key={index}>
@@ -50,7 +49,7 @@ class About extends Component {
                         <h1 className="heading">About Me</h1>
                     </div>
                     <div className="col-12 col-sm-4">
-                        <img src={casualDp} alt="" className="w-100"/>
+                        <img src={process.env.PUBLIC_URL + '/' + 'casual-dp.jpg'} alt="" className="w-100"/>
                         <a href={resume} className="btn btn--rounded btn-block mt-3" target="_blank" download>Download Resume</a>
                     </div>
                     <div className="col-12 col-sm-8">
@@ -94,7 +93,7 @@ class About extends Component {
                                     <div className="col-12">
                                         <h4>JEREMY ESPINOSA</h4>
                                         <p className="subheading"><strong>Web Developer / Front-End Developer</strong></p>
-                                        
+
                                         <h4 className="heading">Objective</h4>
                                         <p>{this.props.details.objectives}</p>
 
@@ -139,17 +138,17 @@ class About extends Component {
                             </TabPane>
 
                             <TabPane tabId="4">
-                                
+
                                 <div className="row">
                                     <div className="col-12">
                                     <h4 className="heading">Designs, Projects Completed</h4>
-                                        
+
                                         <ul>
                                             {projects}
                                         </ul>
                                     </div>
                                 </div>
-                                    
+
                             </TabPane>
 
                             <TabPane tabId="5">

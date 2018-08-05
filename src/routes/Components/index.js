@@ -20,9 +20,9 @@ class Components extends Component {
                         </div>
                         <nav className="header__nav">
                             <ul className="nav__list">
-                                <li className="nav__list-item"><a href="#">Home</a></li>
-                                <li className="nav__list-item"><a href="#">About</a></li>
-                                <li className="nav__list-item"><a href="#">Portfolios</a></li>
+                                <li className="nav__list-item"><a>Home</a></li>
+                                <li className="nav__list-item"><a>About</a></li>
+                                <li className="nav__list-item"><a>Portfolios</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -35,15 +35,15 @@ class Components extends Component {
                         </div>
                         <div className="col-3">
                             <p>btn--standard</p>
-                            <a href="#" className="btn btn--standard">Submit</a>
+                            <a className="btn btn--standard">Submit</a>
                         </div>
                         <div className="col-3">
                             <p>btn--outline</p>
-                            <a href="#" className="btn btn--outline">Submit</a>
+                            <a className="btn btn--outline">Submit</a>
                         </div>
                         <div className="col-3">
                             <p>btn--rounded</p>
-                            <a href="#" className="btn btn--rounded">Submit</a>
+                            <a className="btn btn--rounded">Submit</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ class Components extends Component {
                                 <div className="banner__content">
                                     <h1>ERROR 404</h1>
                                     <p>The page you were looking for could not be found</p>
-                                    <a href="#" className="btn btn--rounded">BACK TO HOME PAGE</a>
+                                    <a className="btn btn--rounded">BACK TO HOME PAGE</a>
                                 </div>
                             </div>
                         </div>

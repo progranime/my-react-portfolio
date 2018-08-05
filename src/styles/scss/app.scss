@@ -1,17 +1,19 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 /* Global Variables of the Application */
-@import './modules/variables';
-@import './modules/typography';
+@import './global/variables';
+@import './global/typography';
+@import './global/grid';
 
 /* Components */
-@import './modules/banner';
-@import './modules/button';
-@import './modules/card';
-@import './modules/header';
-@import './modules/heading';
-@import './modules/hr';
-@import './modules/icon';
-@import './modules/list';
-@import './modules/social-share';
-@import './modules/tabs';
+@import './components/banner';
+@import './components/button';
+@import './components/card';
+@import './components/header';
+@import './components/heading';
+@import './components/hr';
+@import './components/icon';
+@import './components/list';
+@import './components/scroll';
+@import './components/social-share';
+@import './components/tabs';
