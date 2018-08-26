@@ -3,7 +3,7 @@ import  { GET_ALL_PORTFOLIOS } from '../actions/portfolios-action';
 const initialState = {
     portfolios: [
         {
-            id: 1,
+            id: '1',
             title: 'Superants Inc.',
             thumbnail: 'superants/homepage.jpg',
             description: 'Lorem ipsum dolor sit amet consectetur',
@@ -15,7 +15,7 @@ const initialState = {
             ]
         },
         {
-            id: 2,
+            id: '2',
             title: 'GeoSCAN',
             thumbnail: 'geoscan/1.png',
             description: 'Lorem ipsum dolor sit amet consectetur',
@@ -31,7 +31,7 @@ const initialState = {
             ]
         },
         {
-            id: 3,
+            id: '3',
             title: 'Police GeoSCAN',
             thumbnail: 'policeGeoscan/1.png',
             description: 'Lorem ipsum dolor sit amet consectetur',

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class Portfolio extends Component {
 
     componentDidMount () {
-        console.log(this.props.portfolios)
+        // console.log(this.props.portfolios)
     }
 
     render () {
@@ -40,7 +40,7 @@ class Portfolio extends Component {
                     </div>
                     <div className="col-12 col-sm-4 order-1 order-sm-2">
                         <h5>Portfolios List</h5>
-                        <ul class="list">
+                        <ul className="list">
                             {portfoliosLink}
                         </ul>
                     </div>
@@ -53,7 +53,7 @@ class Portfolio extends Component {
 const mapStateToProps = (state, props) => ({
     portfolios: state.portfolios,
     portfolio: state.portfolios.filter( (data) => {
-        return data.id == props.match.params.id
+        return data.id === props.match.params.id
     })
 })
 

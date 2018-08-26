@@ -28,7 +28,7 @@ class Portfolio extends Component {
         })
         return (
             <div className="container py-4">
-                <h3 class="heading">Portfolios</h3>
+                <h3 className="heading">Portfolios</h3>
 
                 <div className="cards row">
                     {portfolios}
