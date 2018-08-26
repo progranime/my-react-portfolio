@@ -98,7 +98,7 @@ class About extends Component {
                                         <p>{this.props.details.objectives}</p>
 
                                         <h4 className="heading">Profile</h4>
-                                        <ul className="list list--inline">
+                                        <ul className="list list--inline ml-0">
                                             <li className="list__item">
                                                 <a href="https://linkedin.com/in/jeremy-espinosa-213236119/" target="_blank"><FA.FaLinkedinSquare className="icon icon--xs"/></a>
                                             </li>
@@ -113,14 +113,14 @@ class About extends Component {
                                 <div className="row">
                                     <div className="col-12">
                                         <h4 className="heading">Education</h4>
-                                        <ul>
+                                        <ul class="list">
                                             <li><strong>School: </strong>Technological Institute of the Philippines (TIP), Quezon City</li>
                                             <li><strong>Year: </strong>2012-2016</li>
                                             <li><strong>Course: </strong>BS Computer Science</li>
                                         </ul>
 
                                         <h4 className="heading">Certifications and Awards</h4>
-                                        <ul>
+                                        <ul class="list">
                                             {awards}
                                         </ul>
                                     </div>
@@ -130,7 +130,7 @@ class About extends Component {
                                 <div className="row">
                                     <div className="col-12">
                                         <h4 className="heading">Knowledge, Skills and Attitude</h4>
-                                        <ul>
+                                        <ul class="list">
                                             {skills}
                                         </ul>
                                     </div>
@@ -143,7 +143,7 @@ class About extends Component {
                                     <div className="col-12">
                                     <h4 className="heading">Designs, Projects Completed</h4>
 
-                                        <ul>
+                                        <ul class="list">
                                             {projects}
                                         </ul>
                                     </div>
@@ -157,7 +157,7 @@ class About extends Component {
                                         <h4 className="heading">Professional Experience</h4>
 
                                         <div className="row">
-                                            <div className="col-6">
+                                            <div className="col-12 col-sm-6">
                                                 <h6 className="subheading">Music Tribe</h6>
                                                 <ul className="list">
                                                     <li className="list__item"><strong>Position: </strong>Web Specialist</li>
@@ -165,7 +165,7 @@ class About extends Component {
                                                 </ul>
                                             </div>
 
-                                            <div className="col-6">
+                                            <div className="col-12 col-sm-6">
                                                 <h6 className="subheading">Gee Pacific</h6>
                                                 <ul className="list">
                                                     <li className="list__item"><strong>Position: </strong>Web Developer</li>

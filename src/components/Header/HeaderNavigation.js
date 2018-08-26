@@ -37,7 +37,7 @@ class HeaderNavigation extends Component {
         let navLinks = this.state.navLinks.map( (navLink) => {
             return (
                 <li className="nav__list-item" key={navLink.id}>
-                    <NavLink to={navLink.link} onClick={this.props.onClassSwitcher}>{navLink.label}</NavLink>
+                    <NavLink exact to={navLink.link} onClick={this.props.onClassSwitcher}>{navLink.label}</NavLink>
                 </li>
             )
         })
