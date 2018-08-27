@@ -41,9 +41,7 @@ const initialState = {
                 'policeGeoscan/7.png', 'policeGeoscan/8.png', 'policeGeoscan/9.png',
                 'policeGeoscan/10.png', 'policeGeoscan/11.png', 'policeGeoscan/12.png',
                 'policeGeoscan/13.png', 'policeGeoscan/14.png', 'policeGeoscan/15.png',
-                'policeGeoscan/16.png', 'policeGeoscan/17.png', 'policeGeoscan/18.png',
-                'policeGeoscan/19.png', 'policeGeoscan/20.png', 'policeGeoscan/21.png',
-                'policeGeoscan/22.png'
+                'policeGeoscan/16.png'
             ]
         }
     ]
