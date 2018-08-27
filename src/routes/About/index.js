@@ -27,17 +27,50 @@ class About extends Component {
 
         let skills = this.props.details.skills.map( (skill, index) => {
             return <li key={index}>{skill}</li>
-        } )
+        })
+
+        let tools = this.props.details.tools.map( (tool, index) => {
+            return <li key={index}>{tool}</li>
+        })
 
         let awards = this.props.details.awards.map( (award, index) => {
             return <li key={index}>{award}</li>
         })
 
-        let projects = this.props.details.projects.map( (project, index) => {
+        let projects = this.props.details.projects.map( (project, x) => {
+
+            let responsibilities = project.responsibilities.map( (responsibility, y) => {
+                return (
+                    <li key={y}>{responsibility}</li>
+                )
+            })
+
             return (
-                <li key={index}>
-                    <p className="subheading">{project.title}</p>
-                    <p>{project.description}</p>
+                <li key={x}>
+                    <p className="mb-0"><strong>{project.title}</strong> - {project.designation}</p>
+                    <ul className="list">
+                        {responsibilities}
+                    </ul>
+                    
+                </li>
+            )
+        })
+
+        let experiences = this.props.details.experiences.map( (experience, x) => {
+            let responsibilities = experience.responsibilities.map( (responsibility, y) => {
+                return (
+                    <li key={y}>{responsibility}</li>
+                )
+            })
+
+            return (
+                <li key={x}>
+                    <p className="mb-0"><strong>{experience.company}</strong> - {experience.designation}</p>
+                    <p className="mb-0"><i>{experience.tenure}</i></p>
+
+                    <ul className="list">
+                        {responsibilities}                        
+                    </ul>
                 </li>
             )
         })
@@ -92,7 +125,7 @@ class About extends Component {
                                 <div className="row">
                                     <div className="col-12">
                                         <h4>JEREMY ESPINOSA</h4>
-                                        <p className="subheading"><strong>Web Developer / Front-End Developer</strong></p>
+                                        <p><i><strong>Web Developer / Front-End Developer</strong></i></p>
 
                                         <h4 className="heading">Objective</h4>
                                         <p>{this.props.details.objectives}</p>
@@ -129,9 +162,14 @@ class About extends Component {
                             <TabPane tabId="3">
                                 <div className="row">
                                     <div className="col-12">
-                                        <h4 className="heading">Knowledge, Skills and Attitude</h4>
+                                        <h4 className="heading">Skills</h4>
                                         <ul className="list">
                                             {skills}
+                                        </ul>
+
+                                        <h4 className="heading">Tools</h4>
+                                        <ul className="list">
+                                            {tools}
                                         </ul>
                                     </div>
                                 </div>
@@ -154,25 +192,11 @@ class About extends Component {
                             <TabPane tabId="5">
                                 <div className="row">
                                     <div className="col-12">
-                                        <h4 className="heading">Professional Experience</h4>
+                                        <h4 className="heading">Work Experience</h4>
 
-                                        <div className="row">
-                                            <div className="col-12 col-sm-6">
-                                                <h6 className="subheading">Music Tribe</h6>
-                                                <ul className="list">
-                                                    <li className="list__item"><strong>Position: </strong>Web Specialist</li>
-                                                    <li className="list__item"><strong>Year: </strong>Aug 2017 - Present</li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="col-12 col-sm-6">
-                                                <h6 className="subheading">Gee Pacific</h6>
-                                                <ul className="list">
-                                                    <li className="list__item"><strong>Position: </strong>Web Developer</li>
-                                                    <li className="list__item"><strong>Year: </strong>June 2016 - June 2017</li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        <ul className="list">
+                                            {experiences}
+                                        </ul>
 
                                     </div>
                                 </div>
