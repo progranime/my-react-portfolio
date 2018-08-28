@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
-import * as FA from 'react-icons/lib/fa';
+import React, { Component } from 'react'
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import * as FA from 'react-icons/lib/fa'
 import { connect } from 'react-redux'
 
 class About extends Component {

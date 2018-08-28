@@ -55,6 +55,16 @@ const initialState = {
                 'pledges/4.jpg', 'pledges/5.jpg', 'pledges/7.jpg', 
                 'pledges/8.jpg', 'pledges/9.jpg', 'pledges/6.jpg'
             ]
+        },
+        {
+            id: '5',
+            title: 'Vision',
+            thumbnail: 'vision/5.jpg',
+            description: `Web app that creates vision of the job description`,
+            images: [
+                'vision/1.jpg', 'vision/2.jpg', 'vision/3.jpg',
+                'vision/4.jpg', 'vision/5.jpg'
+            ]
         }
     ]
 }

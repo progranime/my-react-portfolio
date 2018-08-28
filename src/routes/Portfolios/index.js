@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 class Portfolio extends Component {
     render () {
-
-        console.log(this.props.portfolios)
 
         let portfolios = this.props.portfolios.map( (portfolio, index) => {
             return (

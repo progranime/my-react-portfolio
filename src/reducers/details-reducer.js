@@ -16,6 +16,38 @@ const initialState = {
         'WordPress',
         'Java, Hybris'
     ],
+    keySkills: [
+        {   
+            label: 'HTML',
+            name: 'HTML/HTML5',
+            rating: 90
+        },
+        {   
+            label: 'CSS',
+            name: 'CSS/CSS3',
+            rating: 95
+        },
+        {   
+            label: 'JS',
+            name: 'Javascript',
+            rating: 95
+        },
+        {   
+            label: 'JS',
+            name: 'jQuery',
+            rating: 90
+        },
+        {   
+            label: 'JS',
+            name: 'AJAX',
+            rating: 85
+        },
+        {   
+            label: 'PHP',
+            name: 'PHP',
+            rating: 90
+        }
+    ],
     tools: [
         'Tortoise SVN, Git',
         'JS Task Runner (Gulp, Grunt)',
@@ -54,6 +86,7 @@ const initialState = {
                 'Automating job description of the company’s employee.',
                 'CRUD (Create, Read, Update, Delete) functionality',
                 'CRUD functionality will depends on its user role.',
+                'Converting the job description to PDF file.',
                 'Exporting of data to CSV file.',
                 'Tracking user action to the application.'
             ]

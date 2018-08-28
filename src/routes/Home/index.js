@@ -1,9 +1,30 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 class Home extends Component {
 
     render () {
+        let keySkills = this.props.details.keySkills.map( (keySkill, x) => {
+            return (
+                <div className="col-12 col-sm-4" key={x}>
+                    <div className="skill">
+                        <div className="skill__container">
+                            <div className="skill__icon">{keySkill.label}</div>
+                            <div className="skill__details">
+                                <span>{keySkill.name}</span>
+                            </div>
+                            <div className="skill__progress">
+                                <div className="skill__progress-bar" style={{width: keySkill.rating + '%'}}>
+                                    <span>{keySkill.rating}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        })
+
         return (
             <div>
                 <div className="banner banner--parallax">
@@ -43,102 +64,7 @@ class Home extends Component {
                         <div className="banner__content">
                             <h3 className="py-4 text-center">SKILLS</h3>
                             <div className="row">
-                                <div className="col-12 col-sm-4">
-                                    <div className="skill">
-                                        <div className="skill__container">
-                                            <div className="skill__icon">HTML</div>
-                                            <div className="skill__details">
-                                                <span>HTML/HTML5</span>
-                                            </div>
-                                            <div className="skill__progress">
-                                                <div className="skill__progress-bar" style={{width: '90%'}}>
-                                                    <span>90%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-12 col-sm-4">
-                                    <div className="skill">
-                                        <div className="skill__container">
-                                            <div className="skill__icon">CSS</div>
-                                            <div className="skill__details">
-                                                <span>CSS/CSS3</span>
-                                            </div>
-                                            <div className="skill__progress">
-                                                <div className="skill__progress-bar" style={{width: '95%'}}>
-                                                    <span>95%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-12 col-sm-4">
-                                    <div className="skill">
-                                        <div className="skill__container">
-                                            <div className="skill__icon">JS</div>
-                                            <div className="skill__details">
-                                                <span>Javascript</span>
-                                            </div>
-                                            <div className="skill__progress">
-                                                <div className="skill__progress-bar" style={{width: '95%'}}>
-                                                    <span>95%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-12 col-sm-4">
-                                    <div className="skill">
-                                        <div className="skill__container">
-                                            <div className="skill__icon">JS</div>
-                                            <div className="skill__details">
-                                                <span>jQuery</span>
-                                            </div>
-                                            <div className="skill__progress">
-                                                <div className="skill__progress-bar" style={{width: '90%'}}>
-                                                    <span>90%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-12 col-sm-4">
-                                    <div className="skill">
-                                        <div className="skill__container">
-                                            <div className="skill__icon">JS</div>
-                                            <div className="skill__details">
-                                                <span>AJAX</span>
-                                            </div>
-                                            <div className="skill__progress">
-                                                <div className="skill__progress-bar" style={{width: '85%'}}>
-                                                    <span>85%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-12 col-sm-4">
-                                    <div className="skill">
-                                        <div className="skill__container">
-                                            <div className="skill__icon">PHP</div>
-                                            <div className="skill__details">
-                                                <span>PHP</span>
-                                            </div>
-                                            <div className="skill__progress">
-                                                <div className="skill__progress-bar" style={{width: '90%'}}>
-                                                    <span>90%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
+                                {keySkills}
                             </div>
                         </div>
                     </div>
@@ -154,15 +80,8 @@ class Home extends Component {
     }
 }
 
-/* const mapStateToProps = (state, props) => {
-    return {
-        portfolios: state.portfolios
-    }
-}
+const mapStateToProps = (state, props) => ({
+    details: state.details
+})
 
-const mapActionsToProps = {
-    onGetAllPortfolios: getAllPortfolios
-} */
-
-// export default connect(mapStateToProps, mapActionsToProps) (Home)
-export default Home
+export default connect(mapStateToProps) (Home)

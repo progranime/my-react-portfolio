@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import * as FA from 'react-icons/lib/fa';
+import React, { Component } from 'react'
+import * as FA from 'react-icons/lib/fa'
 
 
 class Contact extends Component {
