@@ -11,13 +11,13 @@ class QuickView extends Component {
                     </div>
                     <ul className="quick-view__list">
                         <li className="quick-view__list-item is-active">
-                            <a href="#">Superants Inc.</a>
+                            <a>Superants Inc.</a>
                         </li>
                         <li className="quick-view__list-item">
-                            <a href="#">GeoSCAN</a>
+                            <a>GeoSCAN</a>
                         </li>
                         <li className="quick-view__list-item">
-                            <a href="#">Police GeoSCAN</a>
+                            <a>Police GeoSCAN</a>
                         </li>
                     </ul>
                 </div>

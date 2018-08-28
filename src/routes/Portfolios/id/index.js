@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
-import QuickView from '../../../components/QuickView'
 
 class Portfolio extends Component {
 
@@ -22,7 +21,7 @@ class Portfolio extends Component {
 
     render () {
         let portfoliosLink = this.props.portfolios.map( (item, i) => {
-            let className = this.state.quickViewListActiveIndex == i  ? `quick-view__list-item is-active` : `quick-view__list-item`
+            let className = this.state.quickViewListActiveIndex === i  ? `quick-view__list-item is-active` : `quick-view__list-item`
 
             return (
                 <li key={item.id} className={className} onClick={this.onClassSwitcher.bind(this, i)}>

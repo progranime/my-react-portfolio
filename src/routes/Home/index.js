@@ -1,24 +1,153 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import banner from '../../assets/banner.jpg';
-
 
 class Home extends Component {
 
     render () {
         return (
             <div>
-                <div className="banner">
+                <div className="banner banner--parallax">
                     <div className="banner__container">
                         <div className="banner__overlay"></div>
-                        <div className="banner__img-holder" style={{backgroundImage: `url(${banner})`}} ></div>
-                        <div className="banner__content">
+                        <div className="banner__img-holder" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/banner.jpg)`}} ></div>
+                        <div className="banner__content banner__content--center">
                             <h1>WEB DEVELOPMENT</h1>
                             <p>Let's transform your idea into Website</p>
-                            <Link to="/about" className="btn btn--overlay">Learn More About Me </Link>
+                            <a href="#about" className="btn btn--overlay">See More </a>
                         </div>
                     </div>
                 </div>
+
+                {/* About Me Section */}
+                <div className="row" id="about">
+                    <div className="col-12 col-sm-4">
+                        <img src={`${process.env.PUBLIC_URL}/images/casual-dp.jpg`} alt="" className="w-100"/>
+                    </div>
+                    <div className="col-12 col-sm-8 p-4 align-self-center">
+                        <h3>Hello I'm Jeremy</h3>
+                        <p><strong><i>Web Developer</i></strong></p>
+                        <p>Experienced Web Developer seeking opportunity to bring knowledge of programming. 
+                            And a self-motivated IT professional with huge knowledge and proficiency in HTML, 
+                            CSS, JavaScript, PHP and mobile responsive web development, as well as strong skills 
+                            and ability in writing clean and efficient code.
+                        </p>
+                        <Link to="/about" className="btn btn--outline">Learn More About Me</Link>
+                    </div>
+                </div>
+
+                {/* Skills Section */}
+                <div className="banner banner--parallax">
+                    <div className="banner__container banner__container--md">
+                        <div className="banner__overlay"></div>
+                        <div className="banner__img-holder" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/banner2.jpg)`}} ></div>
+                        <div className="banner__content">
+                            <h3 className="py-4 text-center">SKILLS</h3>
+                            <div className="row">
+                                <div className="col-12 col-sm-4">
+                                    <div className="skill">
+                                        <div className="skill__container">
+                                            <div className="skill__icon">HTML</div>
+                                            <div className="skill__details">
+                                                <span>HTML/HTML5</span>
+                                            </div>
+                                            <div className="skill__progress">
+                                                <div className="skill__progress-bar" style={{width: '90%'}}>
+                                                    <span>90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-12 col-sm-4">
+                                    <div className="skill">
+                                        <div className="skill__container">
+                                            <div className="skill__icon">CSS</div>
+                                            <div className="skill__details">
+                                                <span>CSS/CSS3</span>
+                                            </div>
+                                            <div className="skill__progress">
+                                                <div className="skill__progress-bar" style={{width: '95%'}}>
+                                                    <span>95%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-12 col-sm-4">
+                                    <div className="skill">
+                                        <div className="skill__container">
+                                            <div className="skill__icon">JS</div>
+                                            <div className="skill__details">
+                                                <span>Javascript</span>
+                                            </div>
+                                            <div className="skill__progress">
+                                                <div className="skill__progress-bar" style={{width: '95%'}}>
+                                                    <span>95%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-12 col-sm-4">
+                                    <div className="skill">
+                                        <div className="skill__container">
+                                            <div className="skill__icon">JS</div>
+                                            <div className="skill__details">
+                                                <span>jQuery</span>
+                                            </div>
+                                            <div className="skill__progress">
+                                                <div className="skill__progress-bar" style={{width: '90%'}}>
+                                                    <span>90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-12 col-sm-4">
+                                    <div className="skill">
+                                        <div className="skill__container">
+                                            <div className="skill__icon">JS</div>
+                                            <div className="skill__details">
+                                                <span>AJAX</span>
+                                            </div>
+                                            <div className="skill__progress">
+                                                <div className="skill__progress-bar" style={{width: '85%'}}>
+                                                    <span>85%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-12 col-sm-4">
+                                    <div className="skill">
+                                        <div className="skill__container">
+                                            <div className="skill__icon">PHP</div>
+                                            <div className="skill__details">
+                                                <span>PHP</span>
+                                            </div>
+                                            <div className="skill__progress">
+                                                <div className="skill__progress-bar" style={{width: '90%'}}>
+                                                    <span>90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                {/* Portfolio Section */}
+
+
 
             </div>
         );

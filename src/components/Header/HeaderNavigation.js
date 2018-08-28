@@ -18,11 +18,11 @@ class HeaderNavigation extends Component {
                     label: 'About',
                     link: '/about'
                 },
-                {
+                /* {
                     id: 3,
                     label: 'Contact',
                     link: '/contact'
-                },
+                }, */
                 {
                     id: 4,
                     label: 'Portfolios',

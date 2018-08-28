@@ -2,6 +2,26 @@
     .banner {
         &__container {
             position: relative;
+            height: 100vh;
+
+            &--sm { 
+                height: 100vh;
+                @include media-breakpoint-up (sm) {
+                    height: 50vh; 
+                }
+            }
+            &--md { 
+                height: 100vh; 
+                @include media-breakpoint-up (sm) {
+                    height: 60vh; 
+                }
+            }
+            &--lg { 
+                height: 100vh;
+                @include media-breakpoint-up (sm) {
+                    height: 80vh; 
+                }
+            }
         }
 
         &__overlay {
@@ -17,18 +37,37 @@
             background-size: cover;
             background-position: center;
             width: 100%;
-            height: 100vh;
+            height: 100%;
         }
 
         &__content {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
             color: #fff;
             line-height: ($global-spacing * 3);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            &--center {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: auto;
+                height: auto;
+            }
         }
 
+    }
+
+    &--parallax {
+        .banner {
+
+            &__img-holder {
+                background-attachment: fixed;
+            }
+
+        }
     }
 }

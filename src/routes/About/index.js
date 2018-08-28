@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import resume from '../../assets/docs/jeremy-espinosa-resume.pdf';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import * as FA from 'react-icons/lib/fa';
 import { connect } from 'react-redux'
@@ -82,8 +81,8 @@ class About extends Component {
                         <h1 className="heading">About Me</h1>
                     </div>
                     <div className="col-12 col-sm-4">
-                        <img src={`${process.env.PUBLIC_URL}/casual-dp.jpg`} alt="" className="w-100"/>
-                        <a href={resume} className="btn btn--rounded btn-block mt-3" target="_blank" download>Download Resume</a>
+                        <img src={`${process.env.PUBLIC_URL}/images/casual-dp.jpg`} alt="" className="w-100"/>
+                        <a href={`${process.env.PUBLIC_URL}/docs/jeremy-espinosa-resume.pdf`} className="btn btn--rounded btn-block mt-3" target="_blank" download>Download Resume</a>
                     </div>
                     <div className="col-12 col-sm-8">
                         <h3 className="heading d-none d-sm-block">About Me</h3>

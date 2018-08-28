@@ -6,7 +6,7 @@ const initialState = {
             id: '1',
             title: 'Superants Inc.',
             thumbnail: 'superants/homepage.jpg',
-            description: 'Lorem ipsum dolor sit amet consectetur',
+            description: 'Created informational websites to know what company offers.',
             images: [
                 'superants/homepage.jpg',
                 'superants/about.jpg',
@@ -18,7 +18,8 @@ const initialState = {
             id: '2',
             title: 'GeoSCAN',
             thumbnail: 'geoscan/1.png',
-            description: 'Lorem ipsum dolor sit amet consectetur',
+            description: `Mobile App that alerts the user if there is a crime near 
+            to it and giving the shortest path away from the crime`,
             images: [
                 'geoscan/1.png', 'geoscan/2.png', 'geoscan/3.png',
                 'geoscan/4.png', 'geoscan/5.png', 'geoscan/6.png',
@@ -34,7 +35,7 @@ const initialState = {
             id: '3',
             title: 'Police GeoSCAN',
             thumbnail: 'policeGeoscan/1.png',
-            description: 'Lorem ipsum dolor sit amet consectetur',
+            description: 'Mobile App for the police officer to report the crime where it take place',
             images: [
                 'policeGeoscan/1.png', 'policeGeoscan/2.png', 'policeGeoscan/3.png',
                 'policeGeoscan/4.png', 'policeGeoscan/5.png', 'policeGeoscan/6.png',
@@ -42,6 +43,17 @@ const initialState = {
                 'policeGeoscan/10.png', 'policeGeoscan/11.png', 'policeGeoscan/12.png',
                 'policeGeoscan/13.png', 'policeGeoscan/14.png', 'policeGeoscan/15.png',
                 'policeGeoscan/16.png'
+            ]
+        },
+        {
+            id: '4',
+            title: 'Pledges',
+            thumbnail: 'pledges/6.jpg',
+            description: `Web app that creates Job Description of the company's employee to avoid manual creation using MS Word`,
+            images: [
+                'pledges/1.jpg', 'pledges/2.jpg', 'pledges/3.jpg',
+                'pledges/4.jpg', 'pledges/5.jpg', 'pledges/7.jpg', 
+                'pledges/8.jpg', 'pledges/9.jpg', 'pledges/6.jpg'
             ]
         }
     ]

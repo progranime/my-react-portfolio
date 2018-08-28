@@ -1,6 +1,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 /* Global Variables of the Application */
+@import './global/global';
 @import './global/variables';
 @import './global/typography';
 @import './global/grid';
@@ -18,3 +19,4 @@
 @import './components/social-share';
 @import './components/tabs';
 @import './components/floating-action';
+@import './components/feature';

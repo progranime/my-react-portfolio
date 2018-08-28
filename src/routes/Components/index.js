@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import banner from '../../assets/banner.jpg';
 
 class Components extends Component {
     render () {
@@ -72,7 +71,7 @@ class Components extends Component {
                         <div className="banner">
                             <div className="banner__container">
                                 <div className="banner__overlay"></div>
-                                <div className="banner__img-holder" style={{backgroundImage: `url(${banner})`}} ></div>
+                                <div className="banner__img-holder" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/banner.jpg)`}} ></div>
                                 <div className="banner__content">
                                     <h1>ERROR 404</h1>
                                     <p>The page you were looking for could not be found</p>
