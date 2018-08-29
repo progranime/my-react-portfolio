@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Lightbox from "react-image-lightbox"
 
 class Portfolio extends Component {
 
     constructor (props) {
         super(props)
+
         this.state = {
             quickView: false,
-            quickViewListActiveIndex: 0
+            quickViewListActiveIndex: 0,
+            photoIndex: 0,
+            isOpen: false
         }
+    
     }
 
     onClassSwitcher (index) {
@@ -19,7 +24,19 @@ class Portfolio extends Component {
         })
     }
 
+    onOpenLightbox (index) {
+        this.setState({
+            photoIndex: index,
+            isOpen: true
+        })
+    }
+
     render () {
+        const { photoIndex, isOpen } = this.state
+        const images = this.props.portfolio[0].images.map( (item) => {
+            return '/' + item // added '/' to search for the root directory
+        })
+
         let portfoliosLink = this.props.portfolios.map( (item, i) => {
             let className = this.state.quickViewListActiveIndex === i  ? `quick-view__list-item is-active` : `quick-view__list-item`
 
@@ -30,9 +47,9 @@ class Portfolio extends Component {
             )
         })
 
-        let portfolios = this.props.portfolio[0].images.map( (image, index) => {
+        let portfolios = this.props.portfolio[0].images.map( (image, i) => {
             return (
-                <div className="card col-12 col-sm-3" key={index}>
+                <div className="card col-12 col-sm-4" key={i} onClick={this.onOpenLightbox.bind(this, i)}>
                     <div className="card__container">
                         <div className="card__body">
                             <div className="card__img-holder">
@@ -66,6 +83,26 @@ class Portfolio extends Component {
                         </div>
                     </div>
                 </div>
+
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={images[photoIndex]}
+                        nextSrc={images[(photoIndex + 1) % images.length]}
+                        prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                        onCloseRequest={() => this.setState({ isOpen: false })}
+                        onMovePrevRequest={() =>
+                        this.setState({
+                            photoIndex: (photoIndex + images.length - 1) % images.length
+                        })
+                        }
+                        onMoveNextRequest={() =>
+                        this.setState({
+                            photoIndex: (photoIndex + 1) % images.length
+                        })
+                        }
+                    />
+                )}
+
             </div>
         );
     }

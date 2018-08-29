@@ -6,6 +6,9 @@
 @import './global/typography';
 @import './global/grid';
 
+/* Vendor styles of the Application */
+@import './vendors/react-image-lightbox';
+
 /* Components */
 @import './components/banner';
 @import './components/button';

@@ -7,7 +7,7 @@ class Portfolio extends Component {
 
         let portfolios = this.props.portfolios.map( (portfolio, index) => {
             return (
-                <div className="card col-12 col-sm-3" key={index}>
+                <div className="card col-12 col-sm-4" key={index}>
                     <div className="card__container">
                         <div className="card__body">
                             <div className="card__img-holder">
