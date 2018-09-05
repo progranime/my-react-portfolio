@@ -18,7 +18,7 @@ const initialState = {
             id: '2',
             title: 'GeoSCAN',
             thumbnail: 'geoscan/1.png',
-            description: `Mobile App that alerts the user if there is a crime near 
+            description: `Mobile App that alerts the user if there is a crime near
             to it and giving the shortest path away from the crime`,
             images: [
                 'geoscan/1.png', 'geoscan/2.png', 'geoscan/3.png',
@@ -52,7 +52,7 @@ const initialState = {
             description: `Web app that creates Job Description of the company's employee to avoid manual creation using MS Word`,
             images: [
                 'pledges/1.jpg', 'pledges/2.jpg', 'pledges/3.jpg',
-                'pledges/4.jpg', 'pledges/5.jpg', 'pledges/7.jpg', 
+                'pledges/4.jpg', 'pledges/5.jpg', 'pledges/7.jpg',
                 'pledges/8.jpg', 'pledges/9.jpg', 'pledges/6.jpg'
             ]
         },
@@ -64,6 +64,24 @@ const initialState = {
             images: [
                 'vision/1.jpg', 'vision/2.jpg', 'vision/3.jpg',
                 'vision/4.jpg', 'vision/5.jpg'
+            ]
+        },
+        {
+            id: '6',
+            title: 'Avatar Maker',
+            thumbnail: 'avatarmaker/desktop/1.jpg',
+            description: `Web app the creates an avatar based on how you customized it`,
+            images: [
+                'avatarmaker/desktop/1.jpg', 'avatarmaker/desktop/2.jpg', 'avatarmaker/desktop/3.jpg',
+                'avatarmaker/desktop/4.jpg', 'avatarmaker/desktop/5.jpg', 'avatarmaker/desktop/6.jpg',
+                'avatarmaker/desktop/7.jpg', 'avatarmaker/desktop/8.jpg', 'avatarmaker/desktop/9.jpg',
+                'avatarmaker/desktop/10.jpg', 'avatarmaker/desktop/11.jpg', 'avatarmaker/desktop/12.jpg',
+                'avatarmaker/desktop/13.jpg', 'avatarmaker/desktop/14.jpg', 'avatarmaker/desktop/15.jpg',
+                'avatarmaker/desktop/16.jpg', 'avatarmaker/desktop/17.jpg', 'avatarmaker/mobile/1.jpg',
+                'avatarmaker/mobile/2.jpg', 'avatarmaker/mobile/3.jpg', 'avatarmaker/mobile/4.jpg',
+                'avatarmaker/mobile/5.jpg', 'avatarmaker/mobile/6.jpg', 'avatarmaker/mobile/7.jpg',
+                'avatarmaker/mobile/8.jpg', 'avatarmaker/mobile/9.jpg', 'avatarmaker/mobile/10.jpg',
+                'avatarmaker/mobile/11.jpg'
             ]
         }
     ]
